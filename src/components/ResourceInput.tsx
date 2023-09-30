@@ -8,7 +8,7 @@ import { Button } from "./ui/button";
 import { usePathname, useRouter } from "next/navigation";
 
 export const ResourceInput = () => {
-  const { push } = useRouter();
+  const { push, refresh } = useRouter();
   const [isPending, startTransition] = useTransition();
   const pathname = usePathname();
 
@@ -23,6 +23,7 @@ export const ResourceInput = () => {
 
     startTransition(() => {
       push(`${pathname}?${searchParams}`);
+      refresh();
     });
   };
 
