@@ -2,14 +2,12 @@ export const prismaSchema = `
 ## Thoughtleader
 * name
 * jobDescription
-* category
 
 ## Article
 * title
 * authors
 * date
 * duration
-* category
 * topics
 
 ## Book
@@ -17,14 +15,11 @@ export const prismaSchema = `
 * authors
 * publisher
 * isbn
-* note
-* category
 * topics
 
 ## Podcast
 * title
 * hosts
-* category
 * topics
 * podcastEpisodes
 
@@ -34,13 +29,11 @@ export const prismaSchema = `
 * guests
 * date
 * duration
-* category
 * topics
 
 ## Directory
 * name
 * description
-* category
 * topics
 
 ## Video
@@ -48,50 +41,42 @@ export const prismaSchema = `
 * creators
 * date
 * duration
-* category
 * topics
 
 ## Tool
 * name
 * description
-* category
 * topics
 
 ## Community
 * name
 * description
-* category
 * topics
 
 ## Course
 * name
 * description
-* category
 * topics
 
 ## Example
 * name
 * description
-* category
 * topics
 
 ## Agency
 * name
 * description
-* category
 * topics
 
 ## Slide
 * title
 * authors
 * date
-* category
 * topics
 
 ## Magazine
 * name
 * description
-* category
 * topics
 
 ## Newsletter
@@ -99,7 +84,6 @@ export const prismaSchema = `
 * authors
 * description
 * frequency
-* category
 * topics
 
 ## Paper
@@ -107,14 +91,12 @@ export const prismaSchema = `
 * authors
 * date
 * journal
-* category
 * topics
 
 ## Social Media Profile
 * name
 * handle
 * description
-* category
 * topics
 
 ## Report
@@ -122,6 +104,5 @@ export const prismaSchema = `
 * authors
 * date
 * description
-* category
 * topics
 `;
