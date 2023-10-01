@@ -5,12 +5,14 @@ import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { FormEvent, useTransition } from "react";
 import { Button } from "./ui/button";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 export const ResourceInput = () => {
   const { push, refresh } = useRouter();
   const [isPending, startTransition] = useTransition();
   const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const url = searchParams.get("url");
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -34,6 +36,8 @@ export const ResourceInput = () => {
           Resource URL:
         </Label>
         <Input
+          key={url}
+          defaultValue={url ?? ""}
           name="url"
           type="url"
           placeholder="https://lifecentereddesign.net"

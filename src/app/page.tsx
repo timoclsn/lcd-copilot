@@ -24,7 +24,9 @@ export default function Home({ searchParams }: Props) {
         <Link href="/" className="hover:underline">
           <h1 className="text-4xl font-black text-center mb-8">LCD Copilot</h1>
         </Link>
-        <ResourceInput />
+        <Suspense>
+          <ResourceInput />
+        </Suspense>
         {url && (
           <Suspense fallback={<div>Processing…</div>}>
             <Answer url={url} />
