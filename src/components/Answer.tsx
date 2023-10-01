@@ -28,7 +28,7 @@ export const Answer = async ({ url }: Props) => {
     messages: [
       {
         role: "user",
-        content: `After the instructions I am going to give you a database schmema in a markdown format (each list is a category with its resprective fields) and the content of a website as html. 
+        content: `After the instructions I am going to give you a database schmema in a markdown format (each list is a category with its resprective fields) and the content of a website. 
         Your job is to figure out, in which of the categories the website content as a whole belongs to. 
         Answer only with the category you are most confident with – never list multiple categories! 
         Only use the categories that are given in the database schema – never invent new ones! 
