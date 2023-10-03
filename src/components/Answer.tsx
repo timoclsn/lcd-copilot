@@ -28,7 +28,7 @@ export const Answer = async ({ url }: Props) => {
     messages: [
       {
         role: "user",
-        content: `After the instructions I am going to give you a database schmema as a markdown table and the text content of a website. 
+        content: `After the instructions I am going to give you a markdown table and the text content of a website. 
         Your job is to figure out how the website content can be categorized. 
         Only use the provided categories – never invent new ones! 
         Answer only with the one category you are most confident with – never list multiple categories! 
@@ -40,7 +40,7 @@ export const Answer = async ({ url }: Props) => {
 
         \n----------------\n
   
-        DATABASE SCHEMA: ${prismaSchema}
+        TABLE: ${prismaSchema}
 
         \n----------------\n
 
