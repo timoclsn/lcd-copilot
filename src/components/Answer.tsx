@@ -41,8 +41,9 @@ export const Answer = async ({ url }: Props) => {
       .replace(/ {2,}/g, "")
       // Replace multiple dots with one
       .replace(/\.{2,}/g, ". ")
+      // Replace multiple pipes with one
       .replace(/\|{2,}/g, "|")
-      // Only use the first 3500 characters
+      // Only use the first 10000 characters
       .substring(0, 10000) + "...";
 
   const prompt = `
