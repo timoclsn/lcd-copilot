@@ -28,13 +28,15 @@ export const Answer = async ({ url }: Props) => {
     messages: [
       {
         role: "user",
-        content: `After the instructions I am going to give you a database schmema in a markdown format (each list is a category with its resprective fields) and the content of a website. 
-        Your job is to figure out, in which of the categories the website content as a whole belongs to. 
-        Answer only with the category you are most confident with – never list multiple categories! 
-        Only use the categories that are given in the database schema – never invent new ones! 
-        Fill out the fields for that category. 
-        Answer in markdown format. 
-        Answer with the name of the category as the headline (level 2) and the fields as a markdown list. 
+        content: `After the instructions I am going to give you a database schmema as a markdown table and the text content of a website. 
+        Your job is to figure out how the website content can be categorized. 
+        Only use the provided categories – never invent new ones! 
+        Answer only with the one category you are most confident with – never list multiple categories! 
+        Fill out the fields for that category like this example: "Field Title: Field Value."
+        Convert the field names from camel case to title case.
+        Format dates like this example: "Date: September 27, 2023 (2023-09-27)".
+        If you can't figure out the a field just add a '-'. 
+        Answer in markdown format with the name of the category as the headline (level 2) and the fields as a unordered list. 
 
         \n----------------\n
   
@@ -42,7 +44,11 @@ export const Answer = async ({ url }: Props) => {
 
         \n----------------\n
 
-        WEBSITE CONTENT: ${urlTextWithoutTags.substring(0, 3500)}
+        WEBSITE CONTENT:
+
+        \`\`\`
+        ${urlTextWithoutTags.substring(0, 3500)}
+        \`\`\`
         `,
       },
     ],
