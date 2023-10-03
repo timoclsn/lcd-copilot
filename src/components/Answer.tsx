@@ -93,7 +93,7 @@ export const Answer = async ({ url }: Props) => {
     \`\`\`
   `;
 
-  console.log(prompt);
+  // console.log(prompt);
 
   const aiResponse = await openai.chat.completions.create({
     model: "gpt-3.5-turbo",
